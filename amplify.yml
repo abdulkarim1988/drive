@@ -6,8 +6,9 @@ frontend:
         - nvm install 16
         - nvm use 16
         - npm install --legacy-peer-deps
-        - npm install aws-amplify @aws-amplify/api-graphql
-        - amplify codegen # Regenerates missing GraphQL mutations
+        - npm install aws-amplify @aws-amplify/api-graphql --legacy-peer-deps
+        - amplify codegen add --apiId d1ef0z29wobkp2 # Configure GraphQL codegen
+        - amplify codegen # Generate GraphQL mutations
     build:
       commands:
         - npm run build
