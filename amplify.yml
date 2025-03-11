@@ -3,8 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
-        - nvm use 16
-        - npm install
+        - npm install --legacy-peer-deps
     build:
       commands:
         - npm run build
@@ -15,3 +14,4 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
+      - dist/**/*
