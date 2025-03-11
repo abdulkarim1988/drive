@@ -4,6 +4,7 @@ frontend:
     preBuild:
       commands:
         - nvm use 16 # Forces Node.js 16 (fixes OpenSSL issue)
+        - nvm use 16
         - npm install --legacy-peer-deps
     build:
       commands:
